@@ -10,7 +10,7 @@ function App() {
   const [items, setItems] = useState([]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/App-budget-">
       <div className="App">
         <Routes>
           <Route path="/" element={<HomePage navigate={(page) => window.location.href = `/${page}`} />} />
