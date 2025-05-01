@@ -1,18 +1,31 @@
 import React from 'react';
-import './HomePage.css';  // Fichier CSS pour styliser les cartes
+import './HomePage.css';
+import { useNavigate } from 'react-router-dom';
 
-function HomePage({ navigate }) {
+function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <div className="home-links">
-      <h1>Bienvenue dans votre Gestionnaire de Tâches !</h1>
+      <h1>Bienvenue dans votre Gestionnaire de Tâches</h1>
       <div className="cards">
-        <div className="card" onClick={() => navigate('new-record')}>
-          <h3>Nouvelle Enregistrement</h3>
-          <p>Ajoutez un nouveau budget et des éléments à acheter.</p>
+        <div
+          className="card"
+          onClick={() => navigate('/new-record')}
+          role="button"
+          tabIndex={0}
+        >
+          <h3>Nouvel Enregistrement</h3>
+          <p>Ajoutez votre argent de poche et les éléments à acheter.</p>
         </div>
-        <div className="card" onClick={() => navigate('history')}>
+        <div
+          className="card"
+          onClick={() => navigate('/history')}
+          role="button"
+          tabIndex={0}
+        >
           <h3>Historique</h3>
-          <p>Voir vos enregistrements précédents et les modifier.</p>
+          <p>Consultez vos enregistrements précédents et modifiez-les.</p>
         </div>
       </div>
     </div>

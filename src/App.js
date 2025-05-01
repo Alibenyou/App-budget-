@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Utilisation correcte
 import HomePage from './components/HomePage';
 import NewRecord from './components/NewRecord';
 import History from './components/History';
@@ -10,16 +10,25 @@ function App() {
   const [items, setItems] = useState([]);
 
   return (
-    <BrowserRouter basename="/App-budget-">
+    <Router> {/* Utilise HashRouter ici */}
       <div className="App">
         <Routes>
-          <Route path="/" element={<HomePage navigate={(page) => window.location.href = `/${page}`} />} />
-          <Route path="/new-record" element={<NewRecord setBudget={setBudget} setItems={setItems} />} />
-          <Route path="/history" element={<History items={items} setItems={setItems} />} />
+          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/new-record"
+            element={
+              <NewRecord
+                setBudget={setBudget}
+                setItems={setItems}
+                items={items}
+              />
+            }
+          />
+          <Route path="/history" element={<History />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

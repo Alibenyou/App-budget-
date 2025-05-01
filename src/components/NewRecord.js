@@ -107,7 +107,7 @@ function NewRecord({ setBudget, setItems, items }) {
 
   return (
     <div className="container">
-      <h2>Nouvelle Enregistrement</h2>
+      <h2>Nouvel Enregistrement</h2>
 
       <form onSubmit={handleBudgetSubmit} className="budget-form">
         <input
