@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/App-budget-/static/css/main.378efc28.css",
-    "main.js": "/App-budget-/static/js/main.6f6a0a44.js",
+    "main.js": "/App-budget-/static/js/main.82256054.js",
     "service-worker.js": "/App-budget-/service-worker.js",
     "index.html": "/App-budget-/index.html",
     "main.378efc28.css.map": "/App-budget-/static/css/main.378efc28.css.map",
-    "main.6f6a0a44.js.map": "/App-budget-/static/js/main.6f6a0a44.js.map"
+    "main.82256054.js.map": "/App-budget-/static/js/main.82256054.js.map"
   },
   "entrypoints": [
     "static/css/main.378efc28.css",
-    "static/js/main.6f6a0a44.js"
+    "static/js/main.82256054.js"
   ]
 }
