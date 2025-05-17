@@ -206,7 +206,6 @@ function NewRecord({ setBudget, setItems, items }) {
                   </>
                 ) : (
                   <>
-                    <button onClick={() => handleEdit(index)}>Modifier</button>
                     <button onClick={() => handleDelete(index)}>Supprimer</button>
                   </>
                 )}
